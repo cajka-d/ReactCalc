@@ -117,6 +117,10 @@ input[type=password] {
   background-color: #02023f;
 }
 
+.content {
+  margin: 45px auto;
+}
+
 .login {
   background-color: #f1f5f9;
   box-shadow: 0px 0px 15px #8baee4;
@@ -129,7 +133,6 @@ input[type=password] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 45px
 }
 .calc > div {
   width: 50%;
@@ -169,6 +172,140 @@ input[type=password] {
 }
 .calc .calculation > .information .row > .value span:last-child {
   font-size: 15px;
+}
+
+.calculators > .list {
+  margin: 0 auto;
+  max-width: 650px;
+  width: 100%;;
+}
+.calculators > .list .title,
+.calculators > .list .calculator .items {
+  border: 1px solid #d2d2d2;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.calculators > .list .calculator:first-child {
+  margin-top: 0;
+}
+.calculators > .list .title .item {
+  font-weight: 700;
+}
+.calculators > .list .title .item,
+.calculators > .list .calculator .item {
+  padding: 15px 15px;
+}
+.calculators > .list .title .item.name,
+.calculators > .list .calculator .item.name {
+  width: 40%;
+}
+.calculators > .list .title .item.rate-year,
+.calculators > .list .calculator .item.rate-year {
+  width: 30%;
+}
+.calculators > .list .title .item.status,
+.calculators > .list .calculator .items .item.status,
+.calculators > .list .calculator .items .item.options {
+  width: 15%;
+}
+.calculators > .list .calculator .items .item.options {
+  display: flex;
+  justify-content: end;
+}
+.calculators > .list .calculator .items .item.options > .option {
+  margin-right: 15px;
+}
+.calculators > .list .calculator .items .item.options > .option:last-child {
+  margin-right: 0;
+}
+.calculators > .list .calculator .settings.hide {
+  display: none;
+}
+.calculators > .list .calculator .settings.fade {
+  display: block;
+}
+.calculators > .list .calculator .form-edit {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.calculators > .list .calculator .form-edit .input {
+  background-color: #b2e6ff;
+  border-right: 1px solid #3bc2ff;
+  margin-bottom: 0;
+  padding: 0 15px;
+}
+.calculators > .list .calculator .form-edit .input:last-child {
+  border-right: 0;
+  padding: 0;
+}
+.calculators > .list .calculator .form-edit .input.calc-name {
+  width: 40%;
+}
+.calculators > .list .calculator .form-edit .input.rate-year {
+  width: 30%;
+}
+.calculators > .list .calculator .form-edit .input.calc-status {
+  line-height: 45px;
+}
+.calculators > .list .calculator .form-edit .input.calc-status,
+.calculators > .list .calculator .form-edit .input.button-edit {
+  width: 15%;
+}
+.calculators > .list .calculator .form-edit .input input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  padding: 8px 0;
+}
+
+.button-option {
+	color: #474772;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+
+.message {
+	background-color: #d5ebff;
+	margin: 0 auto 20px;
+	max-width: 350px;
+	padding: 10px 15px;
+	text-align: center;
+}
+.message.fade {
+  display: block;
+}
+.message.hide {
+  display: none;
+}
+
+.checkbox {
+  background-color: #a4baff;
+  border: 1px solid #b0b5c2;
+  border-radius: 25px;
+  cursor: pointer;
+  height: 25px;
+  position: relative;
+  width: 40px;
+}
+.checkbox.checked {
+  background-color: #37a552;
+}
+.checkbox > .check {
+  background-color: #efeff8;
+  border: 1px solid #b0b5c2;
+  border-radius: 25px;
+  left: -1px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  width: 25px;
+}
+.checkbox.checked > .check {
+  left: auto;
+  right: -1px;
 }
 
 .footer {

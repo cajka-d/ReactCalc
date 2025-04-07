@@ -1,11 +1,15 @@
 import React from 'react';
+
 import {autho} from './../functions.js';
 
+import Message from './Message.js';
 
-function Login(){
+function Login(props){
     return (
         <div className="login">
             <h2>Вход в админ</h2>
+
+            <Message statusMessage={ props.statusMessage } />
 
             <div className="input">
                 <input type="text" placeholder="Логин" id="login" />
@@ -14,7 +18,7 @@ function Login(){
                 <input type="password" placeholder="Пароль" id="password" />
             </div>
             <div className="input">
-                <button onClick={ () => autho() } className="button">Войти</button>
+                <button onClick={ () => autho(props) } className="button">Войти</button>
             </div>
         </div>
     );

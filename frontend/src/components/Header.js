@@ -11,7 +11,7 @@ function Header(props){
                 <p>Калькулятор</p>
             </div>
             <div className='item-right'>
-                <Menu setPage={ props.setPage } />
+                <Menu setPage={ props.setPage } calculators={ props.calculators } calculatorsActive={ props.calculatorsActive } />
             </div>
         </div>
     );

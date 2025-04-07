@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {addCalc} from "./../functions.js";
 
-function Admin(props){
+import Message from './Message.js';
+
+function AddCalc(props){
     return (
-        <div className='admin'>
-            <div className='add-form'>
+        <div className='form-add'>
+            <h2>Добавить Калькулятор</h2>
+
+            <Message statusMessage={ props.statusMessage }/>
+
+            <div className="form">
                 <div className="input">
                     <input type="text" placeholder="Название калькулятора " id="calcName" />
                 </div>
@@ -13,15 +19,11 @@ function Admin(props){
                     <input type="text" placeholder="Годовая ставка" id="rateYear" />
                 </div>
                 <div className="input">
-                    <button onClick={ () => addCalc() } className="button">Сохранить</button>
+                    <button onClick={ () => addCalc( props ) } className="button">Сохранить</button>
                 </div>
-            </div>
-
-            <div className='calc-list'>
-
             </div>
         </div>
     );
 }
 
-export default Admin;
+export default AddCalc;

@@ -1,14 +1,30 @@
 import React from 'react';
 
-function Menu(props){
-    return (
-        <ul className='menu'>
-            <li onClick={ () => props.setPage('CalcMortgage') }>Ипотека</li>
-            <li onClick={ () => props.setPage('CarLoan') }>Автокредит</li>
-            <li onClick={ () => props.setPage('ConsumerCredit') }>Потребительский</li>
+import {isAutho, exit} from "./../functions.js";
 
-            <li onClick={ () => props.setPage('Login') }>Войти</li>
-        </ul>
+function Menu(props){
+    const calculators = props.calculators.filter((item) => item.status == true);
+
+   return (
+        <div className='nav-menu'>
+            { !isAutho() ? (
+                <ul className='menu'>
+                    {
+                        calculators.map((item, index) => (
+                            <li onClick={ () => props.setPage(`calculator_${index}`) }>{ item.name }</li>
+                        ))
+                    }
+
+                    <li onClick={ () => props.setPage('Login') }>Войти</li>
+                </ul>
+            ) : (
+                <ul className='menu'>
+                    <li onClick={ () => props.setPage('Calculators') }>Калькуляторы</li>
+                    <li onClick={ () => props.setPage('AddCalc') }>Добавить новый</li>
+                    <li onClick={ () => exit(props) }>Выйти</li>
+                </ul>
+            )}
+        </div>
     );
 }
 
