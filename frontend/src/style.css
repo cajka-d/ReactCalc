@@ -60,14 +60,10 @@ input[type=password] {
   margin-bottom: 0;
 }
 
-#root {
-  height: 100%;
-}
-
 .wrapper {
   height: 100%;
   overflow: hidden;
-  padding-bottom: 52px;
+  padding-bottom: 57px;
   position: relative;
 }
 
@@ -78,6 +74,7 @@ input[type=password] {
   padding: 0 4%;
 }
 .header .item-left {
+  min-width: 200px;
   overflow: hidden;
   width: 20%;
 }
@@ -320,3 +317,62 @@ input[type=password] {
   right: 0;
   text-align: center;
 }
+
+@media only screen and (max-width: 960px) {
+  .content {
+    margin: 45px auto;
+    padding: 0 3%;
+  }
+  .calc .form {
+    justify-content: center;
+  }
+  .calc .calculation {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .header .item-left {
+    min-width: 149px;
+  }
+  .header .item-left .logo {
+    margin: 10px 8px 6px 0;
+  }
+  .header .item-left p {
+    font-size: 1.1em;
+    margin-top: 14px;
+  }
+  .menu li {
+    padding: 0 10px;
+  }
+  .calc {
+    display: block;
+  }
+  .calc .form {
+    padding-right: 0;
+    width: 100%;
+  }
+  .calc .calculation {
+    display: block;
+    margin-top: 30px;
+    padding-left: 0;
+    width: 100%;
+  }
+  .calc .calculation > .information {
+    display: block;
+    margin: 0 auto;
+    max-width: 350px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .header {
+    display: block;
+  }
+  .header .item-left {
+    margin: 0 auto;
+  }
+  .menu {
+    justify-content: center;
+  }}

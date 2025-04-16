@@ -5,7 +5,7 @@ import Calculator from './Calculator';
 function Calculators(props){
     return (
         <div className='calculators'>
-            <h2>Список Калькуляторов</h2>
+            <h2>Список калькуляторов</h2>
 
             <div className='list'>
                 <div className="title">
