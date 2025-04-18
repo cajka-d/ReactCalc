@@ -21,6 +21,7 @@ body {
   font-style: 16px;
   height: 100%;
 }
+
 h2 {
   color: #000;
   font-size: 1.5em;
@@ -58,6 +59,10 @@ input[type=password] {
 }
 .input:last-child {
   margin-bottom: 0;
+}
+
+#root {
+	height: 100vh;
 }
 
 .wrapper {
@@ -333,6 +338,10 @@ input[type=password] {
 }
 
 @media only screen and (max-width: 769px) {
+  #root {
+    height: auto;
+  }
+  
   .header .item-left {
     min-width: 149px;
   }
